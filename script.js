@@ -72,16 +72,28 @@ contentTabla.addEventListener("click", (e) => {
     if (e.target.classList.contains("editar")) {
         const fila = e.target.closest("tr");
         const celdas = fila.getElementsByTagName("td");
+        // Pedir Nombre
+        const nuevoNombre = prompt("Editar Nombre:", celdas[0].innerText);
+        if (nuevoNombre !== null) celdas[0].innerText = nuevoNombre;
 
-        // Pedimos los nuevos datos (Simple, con prompt)
-        const nuevoNombre = prompt("Nuevo nombre:", celdas[0].innerText);
-        const nuevaEdad = prompt("Nueva edad:", celdas[1].innerText);
+        // Pedir Edad (Solo números)
+        let nuevaEdad;
+        while (true) {
+            nuevaEdad = prompt("Editar Edad (Solo números):", celdas[1].innerText);
+            if (nuevaEdad === null) break; 
+            if (nuevaEdad.trim() !== "" && !isNaN(nuevaEdad)) {
+                celdas[1].innerText = nuevaEdad;
+                break;
+            } else {
+                alert("Por favor, ingresa un número válido para la edad.");
+            }
+        }
+        // Pedir Carrera
         const nuevaCarrera = prompt("Editar Carrera:", celdas[2].innerText);
-        const nuevoCorreo = prompt("Editar Correo:", celdas[3].innerText);
-
-        if (nuevoNombre) celdas[0].innerText = nuevoNombre;
-        if (nuevaEdad) celdas[1].innerText = nuevaEdad;
         if (nuevaCarrera !== null) celdas[2].innerText = nuevaCarrera;
+
+        // Pedir Correo
+        const nuevoCorreo = prompt("Editar Correo:", celdas[3].innerText);
         if (nuevoCorreo !== null) celdas[3].innerText = nuevoCorreo;
-    }
+        }
 });
