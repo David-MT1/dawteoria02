@@ -4,7 +4,10 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
+/*tituloo*/
+
  
+
 body {
     background-color: #f0f2f5;
     color: #222;
@@ -63,15 +66,11 @@ form button[type="reset"]:hover {
 }
  
 /************ Sección resultado *****/
-h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
- 
+
 #resultado {
     margin-bottom: 20px;
     font-size: 14px;
-    color: #444;
+
 }
 
 
@@ -108,29 +107,23 @@ tbody td {
     border-bottom: 1px solid #e8e8e8;
 }
 
-.celda-acciones {
-    background: transparent !important; 
-    border: none !important;
-    padding-left: 20px !important;
-    box-shadow: none !important;
-    white-space: nowrap;
-    width: 1%;
+/********** Botones de acción en tabla **********/
+.editar, .eliminar {
+    background: #e8e8e8;
+    border: #e8e8e8;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 8px;
+    color: inherit;
 }
 
-tbody tr:hover .celda-acciones {
-    background-color: transparent !important;
-}
-
-/* Redondear esquinas inferiores de la zona blanca */
-tbody tr:last-child td:first-child { border-radius: 0 0 0 8px; }
-tbody tr:last-child td:nth-child(4) { border-radius: 0 0 8px 0; }
-
-/* ── Botones de acción en tabla ── */
 .editar:hover {
     color: #4a90e2;
+    background-color: #e8e8e8;
+    background: #e8e8e8;
 }
 
 .eliminar:hover {
     color: #e05252;
+    background: #e8e8e8;
 }
-
