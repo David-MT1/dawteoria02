@@ -33,8 +33,8 @@ function agregar(){
             <td> ${edad.value} </td>
             <td> ${carrera.value} </td>
             <td> ${correo.value} </td>
-            <td> <button class="editar" hidden>Editar</button> </td>
-            <td> <button class="eliminar">Eliminar</button> </td>
+            <td> <button class="editar" style="visibility: hidden";>Editar </button> </td>
+            <td> <button class="eliminar">Eliminar --</button> </td>
             
         </tr>
     `
@@ -45,13 +45,21 @@ btnAgregar.addEventListener("click", () => {
     agregar();
 });
 
-
-document.addEventListener('mouseover', (e) => {
-    if (e.target.className == "informacionFila"){
-        const infoFila = document.querySelectorAll("informacionFila");
-        const btnAgregar = e.getElementById("eliminar");
-        btnAgregar.hidden = false;
+contentTabla.addEventListener("mouseover", (e) => {
+    const fila = e.target.closest(".informacionFila");
+    if (fila) {
+        const btnEditar = fila.querySelector(".editar");
+        if (btnEditar) btnEditar.style.visibility = "visible";
     }
-    
 });
+
+contentTabla.addEventListener("mouseout", (e) => {
+    const fila = e.target.closest(".informacionFila");
+    if (fila) {
+        const btnEditar = fila.querySelector(".editar");
+        if (btnEditar) btnEditar.style.visibility = "hidden";
+    }
+});
+
+
 
