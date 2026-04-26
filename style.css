@@ -108,6 +108,9 @@ tbody td:not(.celda-acciones){
 
 /********** Botones de acción en tabla **********/
 
+.celda-acciones {
+    padding-left: 20px;
+}
 .editar, .eliminar {
     padding: 9px 20px;
     border: none;
