@@ -4,7 +4,10 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
+/*tituloo*/
+
  
+
 body {
     background-color: #f0f2f5;
     color: #222;
@@ -63,61 +66,45 @@ form button[type="reset"]:hover {
 }
  
 /************ Sección resultado *****/
-h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
- 
+
 #resultado {
     margin-bottom: 20px;
     font-size: 14px;
-    color: #444;
+
 }
 
 
 /******* Tablas ********/
 table {
+    
     width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    max-width: 900px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
     margin-bottom: 30px;
     font-size: 14px;
 }
- 
-thead {
+
+/* Solo las celdas de encabezado tienen fondo azul */
+thead th {
     background-color: #4a90e2;
     color: #fff;
-}
- 
-thead th {
     padding: 11px 16px;
     text-align: left;
-    font-weight: 600;
+    border: none;
 }
- 
-tbody tr {
-    border-bottom: 1px solid #e8e8e8;
-}
- 
-tbody tr:last-child {
-    border-bottom: none;
-}
- 
-tbody tr:nth-child(even) {
-    background-color: #f7f9fc;
-}
- 
-tbody tr:hover {
-    background-color: #eaf2ff;
-}
- 
+
+/* Redondear esquinas del encabezado */
+thead th:first-child { border-radius: 8px 0 0 0; }
+thead th:last-child { border-radius: 0 8px 0 0; }
+
+/* Las celdas de datos tienen fondo blanco y sombra simulada */
 tbody td {
     padding: 10px 16px;
     color: #333;
+    background-color: #fff; 
+    border-bottom: 1px solid #e8e8e8;
 }
 
 /********** Botones de acción en tabla **********/

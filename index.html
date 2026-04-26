@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="style.css  ">
 </head>
 <body>
+    <header>
+        <h1 id="tituloPagina">FORMULARIO ESTUIANTE</h1>
+    </header>
 
+    <button id="btnColor" style="margin-bottom: 20px;">Cambiar Color de Fondo</button>
+    
     <form id="formulario">
         <input type="text" id="nombre" placeholder="Nombre"><br><br>
         <input type="number" id="edad" placeholder="Edad"><br><br>
@@ -18,28 +23,27 @@
         <button type="reset">RESETEAR</button>
     </form>
 
-    <h3>Datos ingresados:</h3>
-    <button onclick="clean()">Eliminar todos</button>
-    <div id="resultado">
+    <div id="resultado" style="display: none;">
+        <h3>Datos ingresados:</h3>
+        <button onclick="clean()">Eliminar todos</button>
 
-    </div>
-    
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-                <th>Carrera</th>
-                <th>Correo</th>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Carrera</th>
+                    <th>Correo</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="contentTabla">
                 
-            </tr>
-        </thead>
-        <tbody id="contentTabla">
-            
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 
     <script src="script.js"></script>
-    
+
 </body>
 </html>
