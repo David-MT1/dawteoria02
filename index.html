@@ -13,15 +13,32 @@
         <input type="text" id="carrera" placeholder="Carrera"><br><br>
         <input type="email" id="correo" placeholder="Correo"><br><br>
 
-        <button id="Enviar">ENVIAR</button>
+        <button id="agregar">AGREGAR</button>
         <button type="reset">RESETEAR</button>
     </form>
 
     <h3>Datos ingresados:</h3>
     <button onclick="clean()">Eliminar todos</button>
-    <div id="resultado"></div>  
+    <div id="resultado">
 
+    </div>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Carrera</th>
+                <th>Correo</th>
+                
+            </tr>
+        </thead>
+        <tbody id="contentTabla">
+            
+        </tbody>
+    </table>
 
+    <script src="script.js"></script>
     
 </body>
 </html>
