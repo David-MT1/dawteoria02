@@ -1,16 +1,6 @@
 //ESTA SERA LA CONSTANTE PARA MODIFICAR EL DIV-RESULTADO
 const divResultado = document.getElementById("resultado");
 
-//CLEAN
-/*ESTA FUNCION SE ENCARGA DE LIMPIAR EL DIVRESULTADO,
-HACIENDO QUE TODAS LAS TABLAS SE ELIMINEN Y
-EL DIV QUEDE VACIO TAL CUAL COMO SOSPECHAMOS XD */
-
-function clean(){
-    contentTabla.innerHTML = "";
-}
-
-
 let nombre = document.getElementById("nombre");
 const edad = document.getElementById("edad");
 const carrera = document.getElementById("carrera");
@@ -18,6 +8,28 @@ const correo = document.getElementById("correo");
 
 const contentTabla = document.getElementById("contentTabla");
 
+//CLEAN
+/*ESTA FUNCION SE ENCARGA DE LIMPIAR EL DIVRESULTADO,
+HACIENDO QUE TODAS LAS TABLAS SE ELIMINEN Y
+EL DIV QUEDE VACIO TAL CUAL COMO SOSPECHAMOS XD */
+
+function clean(){
+    contentTabla.innerHTML = "";
+    visibilidadTabla();
+}
+
+
+visibilidadTabla();
+//VISIBILIDAD TABLA
+function visibilidadTabla(){
+    const numeroFilas = contentTabla.querySelectorAll(".informacionFila").length;
+    
+    if (numeroFilas > 0) {
+        divResultado.style.display = "block";
+    } else {
+        divResultado.style.display = "none";
+    }
+}
 
 //FUNCIÓN AGREGAR
 function agregar(){
@@ -27,14 +39,16 @@ function agregar(){
             <td> ${edad.value} </td>
             <td> ${carrera.value} </td>
             <td> ${correo.value} </td>
-            <td class="columna-invisible"> 
+            <td class="celda-acciones"> 
                 <button class="editar" style="visibility: hidden;">Editar</button>
                 <button class="eliminar" style="visibility: hidden;">Eliminar</button>
             </td>
         </tr>
     `
+    visibilidadTabla();
 }
 
+//EJECUCIÓN DE AGREGAR
 formulario.addEventListener("submit", (event) => {
     event.preventDefault(); 
 
@@ -74,6 +88,7 @@ contentTabla.addEventListener("click", (e) => {
     if (e.target.classList.contains("eliminar")) {
         const fila = e.target.closest("tr");
         fila.remove();
+        visibilidadTabla();
     }
 
     // LÓGICA PARA EDITAR FILA
