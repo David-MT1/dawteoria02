@@ -33,7 +33,7 @@ function agregar(){
             <td> ${edad.value} </td>
             <td> ${carrera.value} </td>
             <td> ${correo.value} </td>
-            <td id="edit"> <button class="editar" hidden>Editar</button> </td>
+            <td id="edit"> <button class="editar" style="visibility: hidden">Editar</button> </td>
             <td id="eliminar"> <button class="eliminar">Eliminar</button> </td>
             
         </tr>
