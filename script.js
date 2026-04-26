@@ -1,4 +1,4 @@
-//ESTA SERA LA CONSTANTE PARA MODIFICAR EL DIV-RESULTADO
+const btnColor = document.getElementById("btnColor");
 const divResultado = document.getElementById("resultado");
 
 let nombre = document.getElementById("nombre");
@@ -81,6 +81,40 @@ contentTabla.addEventListener("mouseout", (e) => {
         fila.querySelectorAll(".editar, .eliminar").forEach(btn => btn.style.visibility = "hidden");
     }
 });
+
+// FUNCIÓN PARA CAMBIAR EL COLOR DE FONDO
+function cambiarFondo() {
+    const celdas = document.querySelectorAll("tbody td:not(.celda-acciones)");
+    const formulario = document.getElementById("formulario")
+
+    if (document.body.style.backgroundColor === "rgb(240, 242, 245)" || document.body.style.backgroundColor === "") {
+        document.body.style.backgroundColor = "#2c3e50"; 
+        document.body.style.color = "#ffffff";  
+        formulario.style.backgroundColor = "#4b647e";
+        formulario.querySelectorAll("input").forEach(input => {
+            input.style.backgroundColor = "#324254";
+            input.style.color = "#ffffff";
+        });
+        
+        celdas.forEach(td => td.style.backgroundColor = "#4b647e"); 
+        celdas.forEach(td => td.style.color = "#fff");
+        btnColor.innerText = "Modo Claro";
+    } else {
+        document.body.style.backgroundColor = "#f0f2f5"; 
+        document.body.style.color = "#222";
+        formulario.style.backgroundColor = "#ffffff";
+        formulario.querySelectorAll("input").forEach(input => {
+            input.style.backgroundColor = "#ffffff";
+            input.style.color = "#000000";
+        });
+
+        celdas.forEach(td => td.style.backgroundColor = "#fff");    
+        celdas.forEach(td => td.style.color = "#333");
+        btnColor.innerText = "Modo Oscuro";
+    }
+}
+
+btnColor.addEventListener("click", cambiarFondo);
 
 //EDITAR
 contentTabla.addEventListener("click", (e) => {
