@@ -76,7 +76,6 @@ form button[type="reset"]:hover {
 
 /******* Tablas ********/
 table {
-    
     width: 100%;
     max-width: 900px;
     border-collapse: separate;
@@ -100,7 +99,7 @@ thead th:first-child { border-radius: 8px 0 0 0; }
 thead th:last-child { border-radius: 0 8px 0 0; }
 
 /* Las celdas de datos tienen fondo blanco y sombra simulada */
-tbody td {
+tbody td:not(.celda-acciones){
     padding: 10px 16px;
     color: #333;
     background-color: #fff; 
@@ -108,14 +107,7 @@ tbody td {
 }
 
 /********** Botones de acción en tabla **********/
-.editar, .eliminar {
-    background: #e8e8e8;
-    border: #e8e8e8;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 4px 8px;
-    color: inherit;
-}
+
 
 .editar:hover {
     color: #4a90e2;
