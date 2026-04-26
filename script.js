@@ -61,5 +61,27 @@ contentTabla.addEventListener("mouseout", (e) => {
     }
 });
 
+contentTabla.addEventListener("click", (e) => {
+    // LÓGICA PARA ELIMINAR FILA
+    if (e.target.classList.contains("eliminar")) {
+        const fila = e.target.closest("tr");
+        fila.remove();
+    }
 
+    // LÓGICA PARA EDITAR FILA
+    if (e.target.classList.contains("editar")) {
+        const fila = e.target.closest("tr");
+        const celdas = fila.getElementsByTagName("td");
 
+        // Pedimos los nuevos datos (Simple, con prompt)
+        const nuevoNombre = prompt("Nuevo nombre:", celdas[0].innerText);
+        const nuevaEdad = prompt("Nueva edad:", celdas[1].innerText);
+        const nuevaCarrera = prompt("Editar Carrera:", celdas[2].innerText);
+        const nuevoCorreo = prompt("Editar Correo:", celdas[3].innerText);
+
+        if (nuevoNombre) celdas[0].innerText = nuevoNombre;
+        if (nuevaEdad) celdas[1].innerText = nuevaEdad;
+        if (nuevaCarrera !== null) celdas[2].innerText = nuevaCarrera;
+        if (nuevoCorreo !== null) celdas[3].innerText = nuevoCorreo;
+    }
+});
