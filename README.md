@@ -3,7 +3,7 @@
 - Linares Taco, Viviana Flobele
 - Mendoza  Taco,  David Jose Luis
 
-## Rúbrica de calificación[^1]
+## Rúbrica de calificación
 | ítem | Descripción | Puntaje |
 | :--- | :--- | :---: |
 | **Página web** | La página web contiene toda la documentación necesaria para comprender el ejercicio. | 4 |
