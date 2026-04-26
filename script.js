@@ -5,9 +5,12 @@ const divResultado = document.getElementById("resultado");
 
 
 //CLEAN DE DAVIID
+/*ESTA FUNCION SE ENCARGA DE LIMPIAR EL DIVRESULTADO,
+HACIENDO QUE TODAS LAS TABLAS SE ELIMINEN Y
+EL DIV QUEDE VACIO TAL CUAL COMO SOSPECHAMOS XD */
 
 function clean(){
-    divResultado.innerHTML = "";
+    contentTabla.innerHTML = "";
 }
 
 
