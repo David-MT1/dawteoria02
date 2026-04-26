@@ -122,8 +122,8 @@ tbody td {
 
 /* ── Botones de acción en tabla ── */
 .editar, .eliminar {
-    background: none;
-    border: none;
+    background: #f0f2f5;
+    border: #f0f2f5;
     cursor: pointer;
     font-size: 14px;
     padding: 4px 8px;
