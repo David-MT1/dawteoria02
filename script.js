@@ -45,6 +45,16 @@ function agregar(){
             </td>
         </tr>
     `
+
+    const celdas = document.querySelectorAll("tbody td:not(.celda-acciones)");
+    
+    if (document.body.style.backgroundColor === "rgb(240, 242, 245)" || document.body.style.backgroundColor === "") {
+        celdas.forEach(td => td.style.backgroundColor = "#fff");    
+        celdas.forEach(td => td.style.color = "#333");
+    }else {
+        celdas.forEach(td => td.style.backgroundColor = "#4b647e"); 
+        celdas.forEach(td => td.style.color = "#fff");
+    }
     visibilidadTabla();
 }
 
@@ -61,7 +71,7 @@ formulario.addEventListener("submit", (event) => {
         alert("¡Detente! Todos los campos son obligatorios");
         return;
     }
-
+    
     agregar();
     formulario.reset();
 });
