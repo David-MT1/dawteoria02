@@ -120,7 +120,7 @@ tbody td {
     color: #333;
 }
 
-/* ── Botones de acción en tabla ── */
+/********** Botones de acción en tabla **********/
 .editar, .eliminar {
     background: #e8e8e8;
     border: #e8e8e8;
