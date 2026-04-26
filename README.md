@@ -1,5 +1,5 @@
 ## Integrantes
-- Figueroa, Suemy
+- Figueroa Laruta, Suemy Alexandra
 - Linares Taco, Viviana Flobele
 - Mendoza  Taco,  David Jose Luis
 
