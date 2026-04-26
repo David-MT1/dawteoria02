@@ -42,10 +42,10 @@ btnAgregar.addEventListener("click", () => {
     agregar();
 });
 
-const infoFila = document.querySelectorAll("informacionFila");
 
 document.addEventListener('mouseover', (e) => {
-    if (e.target.className == infoFila.className){
+    if (e.target.className == "informacionFila"){
+        const infoFila = document.querySelectorAll("informacionFila");
         const btnAgregar = e.getElementById("eliminar");
         btnAgregar.hidden = false;
     }
