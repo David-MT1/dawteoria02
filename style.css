@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+ 
+body {
+    background-color: #f0f2f5;
+    color: #222;
+    padding: 30px;
+}
+ 
+/******* Formulario *************/
+form {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+ 
+form input {
+    width: 100%;
+    padding: 9px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+ 
+form input:focus {
+    outline: none;
+    border-color: #3c90f1;
+}
+ 
+form button {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+ 
+#agregar {
+    background-color: #4a90e2;
+    color: #fff;
+}
+ 
+#agregar:hover {
+    background-color: #357abd;
+}
+ 
+form button[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+}
+ 
+form button[type="reset"]:hover {
+    background-color: #c8c8c8;
+}
+ 
+/************ Sección resultado *****/
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+ 
+#resultado {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+
+/******* Tablas ********/
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+ 
+thead {
+    background-color: #4a90e2;
+    color: #fff;
+}
+ 
+thead th {
+    padding: 11px 16px;
+    text-align: left;
+    font-weight: 600;
+}
+ 
+tbody tr {
+    border-bottom: 1px solid #e8e8e8;
+}
+ 
+tbody tr:last-child {
+    border-bottom: none;
+}
+ 
+tbody tr:nth-child(even) {
+    background-color: #f7f9fc;
+}
+ 
+tbody tr:hover {
+    background-color: #eaf2ff;
+}
+ 
+tbody td {
+    padding: 10px 16px;
+    color: #333;
+}
