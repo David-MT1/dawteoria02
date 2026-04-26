@@ -3,6 +3,7 @@ const divResultado = document.getElementById("resultado");
 
 let nombre = document.getElementById("nombre");
 const edad = document.getElementById("edad");
+
 const carrera = document.getElementById("carrera");
 const correo = document.getElementById("correo");
 
@@ -71,6 +72,12 @@ formulario.addEventListener("submit", (event) => {
         alert("Todos los campos son obligatorios");
         return;
     }
+    
+        if (parseInt(valEdad) < 0) {
+        alert("La edad no puede ser negativa");
+        return;
+    }
+
     
     agregar();
     formulario.reset();
