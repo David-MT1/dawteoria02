@@ -122,8 +122,8 @@ tbody td {
 
 /* ── Botones de acción en tabla ── */
 .editar, .eliminar {
-    background: #f0f2f5;
-    border: #f0f2f5;
+    background: #e8e8e8;
+    border: #e8e8e8;
     cursor: pointer;
     font-size: 14px;
     padding: 4px 8px;
@@ -132,8 +132,11 @@ tbody td {
 
 .editar:hover {
     color: #4a90e2;
+    background-color: #e8e8e8;
+    background: #e8e8e8;
 }
 
 .eliminar:hover {
     color: #e05252;
+    background: #e8e8e8;
 }
