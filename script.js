@@ -69,7 +69,7 @@ formulario.addEventListener("submit", (event) => {
     const valCorreo = correo.value.trim();
 
     if (valNombre === "" || valEdad === "" || valCarrera === "" || valCorreo === "") {
-        alert("¡Detente! Todos los campos son obligatorios");
+        alert("Todos los campos son obligatorios");
         return;
     }
     
@@ -155,7 +155,7 @@ contentTabla.addEventListener("click", (e) => {
                 celdas[0].innerText = nuevoNombre;
                 break;
             }
-            alert("El nombre no puede estar vacío.");
+            alert("El nombre no puede estar vacío");
         }
         // Pedir Edad (Solo números)
         let nuevaEdad;
@@ -190,7 +190,7 @@ contentTabla.addEventListener("click", (e) => {
                 celdas[3].innerText = nuevoCorreo;
                 break;
             }
-            alert("Ingresa un correo electrónico válido.");
+            alert("Ingresa un correo electrónico válido");
         }
     }
 });
